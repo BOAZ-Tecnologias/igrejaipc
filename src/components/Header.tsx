@@ -1,6 +1,4 @@
 export default function Header() {
-  const currentUrl = window.location.hash;
-  console.log(currentUrl);
   return (
     <header className='flex flex-row items-center justify-between px-[10rem] gap-[150px] w-screen h-[97px] border-b-[1px] border-white'>
       <span>LOGO</span>
