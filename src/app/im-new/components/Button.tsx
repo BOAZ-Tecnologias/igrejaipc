@@ -18,7 +18,7 @@ export default function Button({
     return (
       <div
         className={cn(
-          `bg-transparent w-[auto] h-[40px] py-[7px] px-[35px] rounded-[24px] border-[2px] border-white flex flex-row items-center justify-center cursor-pointer transition-all hover:scale-95 hover:bg-white text-white hover:text-black font-semibold`,
+          `bg-transparent w-[auto] h-[40px] py-[7px] px-[25px] rounded-[24px] border-[2px] border-white flex flex-row items-center justify-center cursor-pointer transition-all hover:scale-95 hover:bg-white text-white hover:text-black font-semibold`,
           className,
         )}>
         <Link href={to}>{content}</Link>
@@ -28,7 +28,7 @@ export default function Button({
     return (
       <div
         className={cn(
-          `bg-gradient-to-r from-[#FE8580] to-[#C89CFE] w-[auto] h-[40px] py-[7px] px-[35px] rounded-[24px] flex flex-row items-center justify-center cursor-pointer transition-all hover:scale-95`,
+          `bg-gradient-to-r from-[#FE8580] to-[#C89CFE] w-[auto] h-[40px] py-[7px] px-[25px] rounded-[24px] flex flex-row items-center justify-center cursor-pointer transition-all hover:scale-95`,
           className,
         )}>
         <Link href={to} className='text-dashboard-bg font-semibold'>

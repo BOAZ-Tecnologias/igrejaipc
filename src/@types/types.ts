@@ -9,3 +9,8 @@ export type Iinfo = {
   description: string;
   options: Option[];
 };
+
+export type IFAQ = {
+  question: string;
+  response: string;
+};
