@@ -40,7 +40,7 @@ const config = {
         'secondary-60': '#E7E7E7',
         'secondary-70': '#C1C5CF',
         'secondary-80': '#7A7F8D',
-        'subtitle-color': '#929292',
+        'subtitle-color': '#AFAFAF',
         'secondary-100': '#393D49',
         'light-green': '#ADFF2F',
         'medium-green': '#ADDF45',

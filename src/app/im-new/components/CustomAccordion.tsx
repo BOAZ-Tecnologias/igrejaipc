@@ -4,31 +4,52 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { Iinfo } from '@/@types/types';
+import Link from 'next/link';
+import Button from './Button';
 
-export default function CustomAccordion() {
+type CustomAccprdionProps = {
+  info: Iinfo;
+};
+
+export default function CustomAccordion({ info }: CustomAccprdionProps) {
   return (
     <Accordion
       type='single'
       collapsible
-      className={`bg-[#313131] w-full h-[auto] rounded-[22px] px-[2rem] py-[1rem] flex items-center`}>
+      className={`bg-[#313131] w-full h-[auto] rounded-[22px] px-[2rem] py-[2.3rem] flex items-center`}>
       <AccordionItem value='item-1' className='w-full'>
         <AccordionTrigger className=' flex flex-row justify-between w-full'>
           <div className='flex flex-row items-center gap-10'>
             <div className='w-[50px] h-[50px] rounded-[9999px] border-[2px] border-white flex items-center justify-center'>
-              1
+              {info.id}
             </div>
-            <span className='text-h5 font-semibold'>
-              Faça uma visita à igreja
-            </span>
+            <span className='text-h5 font-semibold'>{info.title}</span>
           </div>
         </AccordionTrigger>
         <AccordionContent>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet
-          voluptatum perspiciatis vitae, sit dolor necessitatibus laborum
-          nostrum inventore consequatur harum possimus autem? Provident at nihil
-          beatae facilis dolore illo labore voluptates sed natus accusamus
-          pariatur temporibus maxime, aperiam optio? Inventore architecto iste
-          modi totam numquam fuga voluptatibus enim quibusdam sit.
+          <div className='flex w-[65%] text-wrap text-large text-subtitle-color leading-relaxed'>
+            {info.description}
+          </div>
+          <div className='flex flex-row gap-6 items-center mt-12'>
+            {info.options.map((option, index) => {
+              return index === 0 ? (
+                <Button
+                  content={option.title}
+                  to={option.url}
+                  variant='gradient'
+                  key={option.title}
+                />
+              ) : (
+                <Button
+                  content={option.title}
+                  to={option.url}
+                  variant='ghost'
+                  key={option.title}
+                />
+              );
+            })}
+          </div>
         </AccordionContent>
       </AccordionItem>
     </Accordion>
