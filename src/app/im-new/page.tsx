@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Button from './components/Button';
 import CustomAccordion from './components/CustomAccordion';
 import FAQ from './components/FAQ';
@@ -113,7 +114,7 @@ export default function ImNew() {
       </div>
       <div id='questions' className='flex flex-col w-full mt-[7rem] gap-[20px]'>
         <div className='bg-gradient-to-tr from-[#FE8580] to-[#C89CFE] w-[60px] h-[60px] rounded-full flex items-center justify-center'>
-          <img
+          <Image
             src='https://uploads-ssl.webflow.com/62e2e350201fb77d6f1c8c9c/62ebf6da32aa5125e4b041e5_questions.svg'
             alt='faq icon'
             className='w-[2.5rem] opacity-70'
@@ -123,7 +124,7 @@ export default function ImNew() {
           Perguntas frequentes
         </span>
         {FAQ_MOCK.map((faq) => {
-          return <FAQ faq={faq} />;
+          return <FAQ key={faq.question} faq={faq} />;
         })}
       </div>
     </main>
