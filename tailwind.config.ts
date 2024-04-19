@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'noise-pattern':
+          "url('https://uploads-ssl.webflow.com/62e2e350201fb77d6f1c8c9c/62e2f41d58806726f2f9f432_Noise.png')",
+      },
       fontSize: {
         h1: '52px',
         h2: '40px',

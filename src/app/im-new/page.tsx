@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Button from './components/Button';
 import CustomAccordion from './components/CustomAccordion';
 import FAQ from './components/FAQ';
+import ContatUsForm from '@/components/ContactUsForm';
 
 const STEPS_MOCK = [
   {
@@ -102,7 +103,7 @@ export default function ImNew() {
         />
         <Button
           content='Contate-nos'
-          to='#contact'
+          to='#contactUs'
           variant='ghost'
           className='h-[55px] rounded-[32px]'
         />
@@ -117,7 +118,9 @@ export default function ImNew() {
           <Image
             src='https://uploads-ssl.webflow.com/62e2e350201fb77d6f1c8c9c/62ebf6da32aa5125e4b041e5_questions.svg'
             alt='faq icon'
-            className='w-[2.5rem] opacity-70'
+            width={40}
+            height={40}
+            className='opacity-70'
           />
         </div>
         <span className='bg-gradient-to-r from-[#ff857e] via-[#c79cff] to-[#c79cff] text-transparent bg-clip-text text-h2 font-bold'>
@@ -127,6 +130,7 @@ export default function ImNew() {
           return <FAQ key={faq.question} faq={faq} />;
         })}
       </div>
+      <ContatUsForm />
     </main>
   );
 }
