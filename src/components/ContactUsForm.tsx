@@ -15,6 +15,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from './ui/button';
 import { Textarea } from './ui/textarea';
 import { RadioGroup, RadioGroupItem } from './ui/radio-group';
+import { useToast } from './ui/use-toast';
 
 const ContactUsFormSchema = z.object({
   firstName: z
@@ -50,13 +51,20 @@ export default function ContatUsForm() {
     },
   });
 
+  const { toast } = useToast();
+
   const handleFormSubmit = (values: z.infer<typeof ContactUsFormSchema>) => {
     console.log(values);
+    toast({
+      title: 'Mensagem enviada com sucesso!',
+      description: 'Agora basta aguardar que entraremos em contato.',
+      variant: 'success',
+    });
   };
 
   return (
     <div
-      className='flex flex-col w-full bg-noise-pattern py-[2rem] px-[3rem] gap-[32px] rounded-[22px]'
+      className='flex flex-col w-full bg-noise-pattern py-[2rem] px-[3rem] gap-[32px] rounded-[22px] mt-[6rem] border-t-[0.5px] border-[#929aa1]'
       id='contactUs'>
       <span className='text-h3 font-bold'>Entre em contato</span>
       <Form {...form}>

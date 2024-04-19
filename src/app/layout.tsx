@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import { cn } from '@/lib/utils';
+import { Toaster } from '@/components/ui/toaster';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={cn(inter.className, 'min-h-screen max-w-screen pb-10')}>
         <Header />
         <div className='flex flex-col w-full h-full px-[9rem]'>{children}</div>
+        <Toaster />
       </body>
     </html>
   );
