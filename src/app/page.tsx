@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <main className='h-full w-full flex items-center justify-start py-[10rem] animate-fade'>
-      <div className='  text-h2 font-bold w-[600px] text-wrap'>
+    <main className='h-full w-full flex md:items-center md:justify-start py-[10rem] animate-fade'>
+      <div className='  text-h2 font-bold w-full md:w-[600px] text-wrap'>
         Igreja é mais que um lugar para{' '}
         <span className='bg-gradient-to-r from-[#FFF89C] to-[#FFB89F] text-transparent bg-clip-text'>
           frequentar

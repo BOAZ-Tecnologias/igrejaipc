@@ -21,7 +21,9 @@ export default function RootLayout({
     <html lang='en'>
       <body className={cn(inter.className, 'min-h-screen max-w-screen pb-10')}>
         <Header />
-        <div className='flex flex-col w-full h-full px-[9rem]'>{children}</div>
+        <div className='flex flex-col w-full h-full px-6 md:px-[9rem]'>
+          {children}
+        </div>
         <Toaster />
       </body>
     </html>

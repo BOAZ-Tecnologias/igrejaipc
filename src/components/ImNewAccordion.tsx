@@ -31,7 +31,7 @@ const AccordionTrigger = React.forwardRef<
       {children}
       <div
         id='icon'
-        className='bg-gradient-to-r from-[#FD8582] to-[#C89CFD] rounded-[999px] h-[40px] w-[40px] transition-transform duration-300 flex items-center justify-center'>
+        className='bg-gradient-to-r from-[#FD8582] to-[#C89CFD] rounded-[999px] h-[40px] min-w-[40px] transition-transform duration-300 flex items-center justify-center'>
         <ChevronDown className='h-[22px] w-[22px] text-black shrink-0 transition-transform duration-300' />
       </div>
     </AccordionPrimitive.Trigger>

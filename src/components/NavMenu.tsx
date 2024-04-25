@@ -6,7 +6,7 @@ export default function NavMenu() {
   const currentURL = usePathname();
   console.log(currentURL);
   return (
-    <nav className='flex flex-row gap-3'>
+    <nav className='hidden md:flex flex-row md:gap-3'>
       <Link
         href={'/im-new'}
         className={`uppercase text-sm bg-transparent flex items-center justify-center h-[40px] border-[1px] border-transparent ${

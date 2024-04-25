@@ -64,14 +64,14 @@ export default function ContatUsForm() {
 
   return (
     <div
-      className='flex flex-col w-full bg-noise-pattern py-[2rem] px-[3rem] gap-[32px] rounded-[22px] mt-[6rem] border-t-[0.5px] border-[#929aa1]'
+      className='flex flex-col w-full bg-noise-pattern py-[2rem] px-[3rem] gap-[2rem] rounded-[22px] mt-[6rem] border-t-[0.5px] border-[#929aa1]'
       id='contactUs'>
       <span className='text-h3 font-bold'>Entre em contato</span>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleFormSubmit)}
           className='flex flex-col gap-[0.7rem]'>
-          <div className='flex flex-row w-full justify-between gap-[3rem]'>
+          <div className='flex flex-col md:flex-row w-full justify-between gap-6 md:gap-[3rem]'>
             <FormField
               control={form.control}
               name='firstName'
@@ -100,7 +100,7 @@ export default function ContatUsForm() {
               )}
             />
           </div>
-          <div className='flex flex-row w-full justify-between gap-[3rem]'>
+          <div className='flex flex-col md:flex-row w-full justify-between gap-3 md:gap-[3rem]'>
             <FormField
               control={form.control}
               name='phone'
@@ -120,7 +120,7 @@ export default function ContatUsForm() {
               name='email'
               render={({ field }) => (
                 <FormItem className='w-full'>
-                  <FormLabel>Sobrenome</FormLabel>
+                  <FormLabel>E-mail</FormLabel>
                   <FormControl>
                     <Input placeholder='Informe o seu e-mail' {...field} />
                   </FormControl>
@@ -179,7 +179,10 @@ export default function ContatUsForm() {
             />
           </div>
 
-          <Button type='submit' className='mt-6 w-[170px]' variant={'gradient'}>
+          <Button
+            type='submit'
+            className='mt-6 md:w-[170px]'
+            variant={'gradient'}>
             Enviar
           </Button>
         </form>

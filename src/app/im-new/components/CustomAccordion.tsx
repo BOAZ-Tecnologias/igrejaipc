@@ -17,18 +17,20 @@ export default function CustomAccordion({ info }: CustomAccprdionProps) {
     <Accordion
       type='single'
       collapsible
-      className={`bg-noise-pattern w-full h-[auto] rounded-[22px] px-[2rem] py-[2rem] flex items-center`}>
+      className={`bg-noise-pattern w-full h-[auto] rounded-[22px] px-3 md:px-[2rem] py-[2rem] flex items-center`}>
       <AccordionItem value='item-1' className='w-full'>
         <AccordionTrigger className=' flex flex-row justify-between w-full'>
-          <div className='flex flex-row items-center gap-10'>
-            <div className='w-[50px] h-[50px] rounded-[9999px] border-[2px] border-white flex items-center justify-center'>
+          <div className='flex flex-row items-center gap-3 md:gap-10'>
+            <div className='w-[50px] h-[50px] rounded-[9999px] border-[2px] border-white hidden md:flex items-center justify-center'>
               {info.id}
             </div>
-            <span className='text-h5 font-semibold'>{info.title}</span>
+            <span className=' text-regular md:text-h5 font-semibold'>
+              {info.title}
+            </span>
           </div>
         </AccordionTrigger>
         <AccordionContent>
-          <div className='flex w-[65%] text-wrap text-large text-subtitle-color leading-relaxed'>
+          <div className='flex md:w-[65%] text-wrap text-large text-subtitle-color leading-relaxed'>
             {info.description}
           </div>
           <div className='flex flex-row gap-6 items-center mt-12'>

@@ -94,7 +94,7 @@ export default function ImNew() {
           Bem-vindo! Esses são os próximos passos para você.
         </span>
       </div>
-      <div className='flex flex-row gap-[50px]'>
+      <div className='flex flex-row gap-6 md:gap-[50px]'>
         <Button
           content='Perguntas'
           to='#questions'
@@ -108,12 +108,14 @@ export default function ImNew() {
           className='h-[55px] rounded-[32px]'
         />
       </div>
-      <div className='flex flex-col w-full mt-[10rem] gap-[40px]'>
+      <div className='flex flex-col w-full mt-6 md:mt-[10rem] gap-[40px]'>
         {STEPS_MOCK.map((step) => {
           return <CustomAccordion key={step.id} info={step} />;
         })}
       </div>
-      <div id='questions' className='flex flex-col w-full mt-[7rem] gap-[20px]'>
+      <div
+        id='questions'
+        className='flex flex-col w-full mt-[7rem] gap-[20px] items-center md:items-start'>
         <div className='bg-gradient-to-tr from-[#FE8580] to-[#C89CFE] w-[60px] h-[60px] rounded-full flex items-center justify-center'>
           <Image
             src='https://uploads-ssl.webflow.com/62e2e350201fb77d6f1c8c9c/62ebf6da32aa5125e4b041e5_questions.svg'
