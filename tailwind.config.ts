@@ -71,10 +71,20 @@ const config = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        'menu-down': {
+          from: { marginTop: '-300px' },
+          to: { marginTop: '0px' },
+        },
+        'menu-up': {
+          from: { marginTop: '0px' },
+          to: { marginTop: '-300px' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'menu-down': 'menu-down 0.8s ease-out',
+        'menu-up': 'menu-up 0.8s ease-out',
         fade: 'fadeIn 0.9s ease-in-out',
       },
     },

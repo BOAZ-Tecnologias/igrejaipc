@@ -18,7 +18,7 @@ const buttonVariants = cva(
         secondary:
           'bg-slate-100 text-slate-900 hover:bg-slate-100/80 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80',
         ghost:
-          'hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50',
+          'md:hover:bg-slate-100 md:hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50',
         link: 'text-slate-900 underline-offset-4 hover:underline dark:text-slate-50',
         gradient:
           'bg-gradient-to-r from-[#FE8580] to-[#C89CFE] w-[auto] h-[40px] py-[7px] px-[25px] rounded-[24px] flex flex-row items-center justify-center cursor-pointer transition-all hover:scale-95',
