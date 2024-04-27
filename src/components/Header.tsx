@@ -43,8 +43,8 @@ export default function Header() {
           openMenu ? 'h-screen' : ''
         }`}>
         <div
-          className={`relative mt-[-300px] transition-all duration-700 ease-in-out ${
-            openMenu ? 'mt-0' : 'opacity-0'
+          className={`relative mt-[-300px] opacity-1 transition-all duration-700 ease-in-out ${
+            openMenu ? 'mt-[0]' : 'opacity-0'
           }`}>
           <Separator />
           <Link
