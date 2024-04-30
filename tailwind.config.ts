@@ -21,6 +21,8 @@ const config = {
       backgroundImage: {
         'noise-pattern':
           "url('https://uploads-ssl.webflow.com/62e2e350201fb77d6f1c8c9c/62e2f41d58806726f2f9f432_Noise.png')",
+        hero1: "url('../assets/images/hero1.jpg')",
+        hero2: "url('../assets/images/hero2.jpg')",
       },
       fontSize: {
         h1: '52px',
@@ -71,14 +73,6 @@ const config = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
-        'menu-down': {
-          from: { marginTop: '-300px' },
-          to: { marginTop: '0px' },
-        },
-        'menu-up': {
-          from: { marginTop: '0px' },
-          to: { marginTop: '-300px' },
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -86,6 +80,8 @@ const config = {
         'menu-down': 'menu-down 0.8s ease-out',
         'menu-up': 'menu-up 0.8s ease-out',
         fade: 'fadeIn 0.9s ease-in-out',
+        fade3s: 'fadeIn 1.9s ease-in',
+        fade2s: 'fadeIn 2.2s ease-in',
       },
     },
   },
