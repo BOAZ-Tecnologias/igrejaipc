@@ -3,7 +3,7 @@ import { ImNewSection } from '@/components/HomePage/ImNewSection';
 
 export default function Home() {
   return (
-    <main className='flex flex-col h-full w-full md:items-center md:justify-start py-[10rem] animate-fade gap-4'>
+    <main className='flex flex-col h-full w-full md:items-center md:justify-start py-[10rem] animate-fade gap-10'>
       <section
         id='hero-section'
         className='flex flex-col md:flex-row justify-between text-h2 font-bold w-full h-full md:h-80 text-wrap md:mt-[5rem] md:mb-[10rem] md:px-2 md:py-4 gap-10 md:gap-0'>
@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </section>
       <GroupsSection />
-      {/* <ImNewSection /> */}
+      <ImNewSection />
     </main>
   );
 }

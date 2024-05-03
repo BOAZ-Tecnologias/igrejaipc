@@ -8,7 +8,7 @@ type GroupCardProps = {
 
 export function GroupCard({ description, img, title }: GroupCardProps) {
   return (
-    <div className='w-full md:w-[320px] h-full rounded-[18px] bg-noise-pattern transition-all duration-300 hover:scale-95 hover:border-2 hover:border-secondary-80'>
+    <div className='w-full md:w-[320px] h-full rounded-[18px] bg-noise-pattern transition-all duration-300 hover:scale-95 hover:border-2 hover:border-secondary-80 hover:cursor-pointer'>
       <Image
         src={img}
         alt=''
