@@ -1,3 +1,9 @@
+import SOUND_BG from '@/assets/images/sound_bg.jpg';
+import kids from '@/assets/images/kids.jpg';
+import kids2 from '@/assets/images/kids2.jpg';
+import acolhimento from '@/assets/images/acolhimento.jpg';
+import media from '@/assets/images/media.jpg';
+
 export const STEPS_MOCK = [
   {
     id: 1,
@@ -70,5 +76,32 @@ export const FAQ_MOCK = [
     question: 'A igreja possui algum serviço para crianças e adolescentes?',
     response:
       'Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.',
+  },
+];
+
+export const GROUPS_MOCK = [
+  {
+    img: SOUND_BG,
+    title: 'Som',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim voluptatem nihil soluta illo eveniet praesentium.',
+  },
+  {
+    img: acolhimento,
+    title: 'Acolhimento',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim voluptatem nihil soluta illo eveniet praesentium.',
+  },
+  {
+    img: media,
+    title: 'Mídia',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim voluptatem nihil soluta illo eveniet praesentium.',
+  },
+  {
+    img: kids2,
+    title: 'Kids',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim voluptatem nihil soluta illo eveniet praesentium.',
   },
 ];

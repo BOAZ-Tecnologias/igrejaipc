@@ -23,6 +23,7 @@ const config = {
           "url('https://uploads-ssl.webflow.com/62e2e350201fb77d6f1c8c9c/62e2f41d58806726f2f9f432_Noise.png')",
         hero1: "url('../assets/images/hero1.jpg')",
         hero2: "url('../assets/images/hero2.jpg')",
+        'sound-bg': "url('../assets/images/sound_bg.jpg')",
       },
       fontSize: {
         h1: '52px',
