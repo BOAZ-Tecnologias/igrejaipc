@@ -4,11 +4,19 @@ type GroupCardProps = {
   img: StaticImageData;
   title: string;
   description: string;
+  onGroupClick: () => void;
 };
 
-export function GroupCard({ description, img, title }: GroupCardProps) {
+export function GroupCard({
+  description,
+  img,
+  title,
+  onGroupClick,
+}: GroupCardProps) {
   return (
-    <div className='w-full md:w-[320px] h-full rounded-[18px] bg-noise-pattern transition-all duration-300 hover:scale-95 hover:border-2 hover:border-secondary-80 hover:cursor-pointer'>
+    <div
+      className='w-full md:w-[320px] max-h-[400px] rounded-[18px] bg-noise-pattern transition-all duration-300 hover:scale-95 hover:border-2 hover:border-secondary-80 hover:cursor-pointer'
+      onClick={onGroupClick}>
       <Image
         src={img}
         alt=''
@@ -19,9 +27,9 @@ export function GroupCard({ description, img, title }: GroupCardProps) {
           height: '200px',
         }}
       />
-      <div className='px-8 py-8'>
-        <span className='text-h5 font-semibold tracking-wide'>{title}</span>
-        <p className='text-regular text-subtitle-color font-semibold'>
+      <div className='px-8 py-4 flex flex-col justify-between w-full h-auto'>
+        <span className='text-large font-semibold tracking-wide'>{title}</span>
+        <p className='text-regular-sm text-subtitle-color font-semibold'>
           {description}
         </p>
       </div>

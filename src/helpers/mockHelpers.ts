@@ -82,26 +82,26 @@ export const FAQ_MOCK = [
 export const GROUPS_MOCK = [
   {
     img: SOUND_BG,
-    title: 'Som',
+    title: 'Áudio',
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim voluptatem nihil soluta illo eveniet praesentium.',
+      'Seja parte da equipe que eleva a qualidade do som, criando um ambiente propício para o encontro com Deus e a celebração da fé.',
   },
   {
     img: acolhimento,
     title: 'Acolhimento',
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim voluptatem nihil soluta illo eveniet praesentium.',
+      'Seja a luz que guia os visitantes e membros para dentro de nossa família espiritual, garantindo que cada pessoa se sinta em casa desde o primeiro momento.',
   },
   {
     img: media,
     title: 'Mídia',
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim voluptatem nihil soluta illo eveniet praesentium.',
+      'Faça parte da equipe que leva a mensagem da esperança e amor a um público mais amplo, ajudando a compartilhar nossa fé e valores com o mundo.',
   },
   {
     img: kids2,
     title: 'Kids',
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim voluptatem nihil soluta illo eveniet praesentium.',
+      'Junte-se a nós para inspirar e moldar as futuras gerações de nossa comunidade, onde elas possam crescer espiritualmente e se conectar com Deus.',
   },
 ];
