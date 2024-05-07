@@ -4,7 +4,7 @@ type GroupCardProps = {
   img: StaticImageData;
   title: string;
   description: string;
-  onGroupClick: () => void;
+  onGroupClick: (group: string) => void;
 };
 
 export function GroupCard({
@@ -13,10 +13,13 @@ export function GroupCard({
   title,
   onGroupClick,
 }: GroupCardProps) {
+  function handleGroupSelection(group: string) {
+    onGroupClick(group);
+  }
   return (
     <div
       className='w-full md:w-[320px] max-h-[400px] rounded-[18px] bg-noise-pattern transition-all duration-300 hover:scale-95 hover:border-2 hover:border-secondary-80 hover:cursor-pointer'
-      onClick={onGroupClick}>
+      onClick={() => handleGroupSelection(title)}>
       <Image
         src={img}
         alt=''

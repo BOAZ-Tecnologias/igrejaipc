@@ -1,5 +1,5 @@
 import SOUND_BG from '@/assets/images/sound_bg.jpg';
-import kids from '@/assets/images/kids.jpg';
+import adoracao from '@/assets/images/adoracao.jpg';
 import kids2 from '@/assets/images/kids2.jpg';
 import acolhimento from '@/assets/images/acolhimento.jpg';
 import media from '@/assets/images/media.jpg';
@@ -103,5 +103,11 @@ export const GROUPS_MOCK = [
     title: 'Kids',
     description:
       'Junte-se a nós para inspirar e moldar as futuras gerações de nossa comunidade, onde elas possam crescer espiritualmente e se conectar com Deus.',
+  },
+  {
+    img: adoracao,
+    title: 'Adoração',
+    description:
+      'Una-se para elevar corações com música e louvor sinceros. Cultive uma atmosfera de conexão profunda com Deus através da harmonia e adoração coletiva.',
   },
 ];
