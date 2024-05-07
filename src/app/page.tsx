@@ -1,3 +1,4 @@
+import { GetOurAppSection } from '@/components/HomePage/GetOurAppSection';
 import { GroupsSection } from '@/components/HomePage/GroupsSection';
 import { ImNewSection } from '@/components/HomePage/ImNewSection';
 
@@ -29,6 +30,7 @@ export default function Home() {
       </section>
       <GroupsSection />
       <ImNewSection />
+      <GetOurAppSection />
     </main>
   );
 }

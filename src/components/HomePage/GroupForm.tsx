@@ -42,8 +42,6 @@ export default function GroupForm({ group }: GroupFormProps) {
     },
   });
 
-  const { toast } = useToast();
-
   const handleFormSubmit = (values: z.infer<typeof GroupFormSchema>) => {
     const phoneNumber = '+5511936187180';
 

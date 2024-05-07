@@ -18,55 +18,39 @@ import { RadioGroup, RadioGroupItem } from './ui/radio-group';
 import { useToast } from './ui/use-toast';
 
 const ContactUsFormSchema = z.object({
-  firstName: z
+  fullName: z
     .string()
     .min(2, { message: 'O nome deve conter no mínimo 2 caracteres.' })
     .max(50),
-  lastName: z
-    .string()
-    .min(2, { message: 'O sobrenome deve conter no mínimo 2 caracteres.' }),
-  phone: z
-    .string()
-    .min(9, { message: 'O telefone deve conter nove dígitos' })
-    .max(11),
-  email: z.string().min(2).email('Informe um e-mail válido.'),
   message: z
     .string()
     .min(2, { message: 'A mensagem deve conter no mínimo 2 caracteres.' }),
-  methodChosen: z.enum(['Whatsapp', 'E-mail'], {
-    required_error: 'Você precisa selecionar um método de contato!',
-  }),
 });
 
 export default function ContatUsForm() {
   const form = useForm<z.infer<typeof ContactUsFormSchema>>({
     resolver: zodResolver(ContactUsFormSchema),
     defaultValues: {
-      firstName: '',
-      lastName: '',
-      phone: '',
-      email: '',
+      fullName: '',
       message: '',
-      methodChosen: 'Whatsapp',
     },
   });
 
-  const { toast } = useToast();
-
   const handleFormSubmit = (values: z.infer<typeof ContactUsFormSchema>) => {
     console.log(values);
-    toast({
-      title: 'Mensagem enviada com sucesso!',
-      description: 'Agora basta aguardar que entraremos em contato.',
-      variant: 'success',
-    });
+
+    const phoneNumber = '+5511936187180';
+
+    const parsedText = `Olá, me chamo ${values.fullName} e tenho a seguinte dúvida: ${values.message}`;
+    const encodedString = encodeURIComponent(parsedText);
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedString}`, '_blank');
   };
 
   return (
     <div
-      className='flex flex-col w-full bg-noise-pattern py-[2rem] px-[3rem] gap-[2rem] rounded-[22px] mt-[6rem] border-t-[0.5px] border-[#929aa1]'
+      className='flex flex-col w-full bg-noise-pattern py-[1rem] px-[1rem] gap-4 rounded-[22px] mt-[6rem] border-t-[0.5px] border-[#929aa1]'
       id='contactUs'>
-      <span className='text-h3 font-bold'>Entre em contato</span>
+      <span className='text-h4 md:text-h3 font-bold'>Entre em contato</span>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleFormSubmit)}
@@ -74,55 +58,12 @@ export default function ContatUsForm() {
           <div className='flex flex-col md:flex-row w-full justify-between gap-6 md:gap-[3rem]'>
             <FormField
               control={form.control}
-              name='firstName'
+              name='fullName'
               render={({ field }) => (
                 <FormItem className='w-full'>
-                  <FormLabel>Nome</FormLabel>
+                  <FormLabel>Nome completo</FormLabel>
                   <FormControl>
-                    <Input placeholder='Nome' {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name='lastName'
-              render={({ field }) => (
-                <FormItem className='w-full'>
-                  <FormLabel>Sobrenome</FormLabel>
-                  <FormControl>
-                    <Input placeholder='Sobrenome' {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          <div className='flex flex-col md:flex-row w-full justify-between gap-3 md:gap-[3rem]'>
-            <FormField
-              control={form.control}
-              name='phone'
-              render={({ field }) => (
-                <FormItem className='w-full'>
-                  <FormLabel>Celular</FormLabel>
-                  <FormControl>
-                    <Input placeholder='Informe o seu celular' {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name='email'
-              render={({ field }) => (
-                <FormItem className='w-full'>
-                  <FormLabel>E-mail</FormLabel>
-                  <FormControl>
-                    <Input placeholder='Informe o seu e-mail' {...field} />
+                    <Input placeholder='Insira seu nome' {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -141,37 +82,6 @@ export default function ContatUsForm() {
                       placeholder='Digite sua mensagem aqui...'
                       {...field}
                     />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          <div className='flex flex-row w-full justify-between gap-[3rem]'>
-            <FormField
-              control={form.control}
-              name='methodChosen'
-              render={({ field }) => (
-                <FormItem className='w-full'>
-                  <FormLabel>Como podemos entrar em contato?</FormLabel>
-                  <FormControl>
-                    <RadioGroup
-                      onValueChange={field.onChange}
-                      defaultValue={field.value}
-                      className='flex flex-col space-y-1'>
-                      <FormItem className='flex items-center space-x-3 space-y-0'>
-                        <FormControl>
-                          <RadioGroupItem value='Whatsapp' />
-                        </FormControl>
-                        <FormLabel className='font-normal'>WhatsApp</FormLabel>
-                      </FormItem>
-                      <FormItem className='flex items-center space-x-3 space-y-0'>
-                        <FormControl>
-                          <RadioGroupItem value='E-mail' />
-                        </FormControl>
-                        <FormLabel className='font-normal'>E-mail</FormLabel>
-                      </FormItem>
-                    </RadioGroup>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
