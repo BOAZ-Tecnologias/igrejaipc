@@ -15,11 +15,11 @@ export function GroupsSection() {
     setGroupSelected(selectedGroupCard);
   }
   return (
-    <section className='flex flex-col w-full h-full gap-10'>
-      <span id='title' className='text-h2 font-bold'>
+    <section className='flex flex-col justify-center items-center w-full h-full gap-10'>
+      <span className='bg-gradient-to-r from-[#ff857e] via-[#c79cff] to-[#c79cff] text-transparent bg-clip-text text-h2 font-bold text-center mt-32'>
         Ministérios
       </span>
-      <div className='flex flex-col md:flex-row md:flex-wrap w-full h-full gap-10'>
+      <div className='flex flex-col md:flex-row md:flex-wrap gap-4'>
         {GROUPS_MOCK.map((group) => {
           return (
             <GroupCard

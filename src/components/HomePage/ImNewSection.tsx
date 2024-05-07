@@ -29,36 +29,16 @@ export function ImNewSection() {
         />
         <Button
           content='Contate-nos'
-          to='#contactUs'
+          to='#contato'
           variant='ghost'
           className='h-[55px] rounded-[32px]'
         />
       </div>
-      <div className='flex flex-col w-full mt-6 md:mt-[10rem] gap-[40px]'>
+      <div className='flex flex-col w-full mt-6 gap-[40px]'>
         {STEPS_MOCK.map((step) => {
           return <CustomAccordion key={step.id} info={step} />;
         })}
       </div>
-      <div
-        id='questions'
-        className='flex flex-col w-full mt-[7rem] gap-[20px] items-center md:items-start'>
-        <div className='bg-gradient-to-tr from-[#FE8580] to-[#C89CFE] w-[60px] h-[60px] rounded-full flex items-center justify-center'>
-          <Image
-            src='https://uploads-ssl.webflow.com/62e2e350201fb77d6f1c8c9c/62ebf6da32aa5125e4b041e5_questions.svg'
-            alt='faq icon'
-            width={40}
-            height={40}
-            className='opacity-70'
-          />
-        </div>
-        <span className='bg-gradient-to-r from-[#ff857e] via-[#c79cff] to-[#c79cff] text-transparent bg-clip-text text-h2 font-bold'>
-          Perguntas frequentes
-        </span>
-        {FAQ_MOCK.map((faq) => {
-          return <FAQ key={faq.question} faq={faq} />;
-        })}
-      </div>
-      <ContatUsForm />
     </section>
   );
 }

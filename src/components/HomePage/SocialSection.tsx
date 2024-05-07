@@ -27,19 +27,19 @@ export function SocialSection() {
       <div className='flex flex-row w-full md:w-[300px] justify-between'>
         <button
           onClick={() => handleSocial('Instagram')}
-          className='border-2 border-white rounded-[999px] py-4 px-4 hover:bg-gradient-to-r from-[#c79cffe5] to-[#9fbfff] hover:scale-95 transition-all'>
+          className='rounded-[999px] py-4 px-4 hover:bg-gradient-to-r from-[#c79cffe5] to-[#9fbfff] hover:scale-95 transition-all'>
           <Instagram className='w-[48px] h-[48px]' />
         </button>
 
         <button
           onClick={() => handleSocial('Facebook')}
-          className='border-2 border-white rounded-[999px] py-4 px-4 hover:bg-gradient-to-r from-[#c79cffe5] to-[#9fbfff] hover:scale-95 transition-all'>
+          className='rounded-[999px] py-4 px-4 hover:bg-gradient-to-r from-[#c79cffe5] to-[#9fbfff] hover:scale-95 transition-all'>
           <Facebook className='w-[48px] h-[48px]' />
         </button>
 
         <button
           onClick={() => handleSocial('Youtube')}
-          className='border-2 border-white rounded-[999px] py-4 px-4 hover:bg-gradient-to-r from-[#c79cffe5] to-[#9fbfff] hover:scale-95 transition-all'>
+          className='rounded-[999px] py-4 px-4 hover:bg-gradient-to-r from-[#c79cffe5] to-[#9fbfff] hover:scale-95 transition-all'>
           <Youtube className='w-[48px] h-[48px]' />
         </button>
       </div>

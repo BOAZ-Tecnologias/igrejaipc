@@ -12,5 +12,5 @@ export type Iinfo = {
 
 export type IFAQ = {
   question: string;
-  response: string;
+  response: string | string[];
 };

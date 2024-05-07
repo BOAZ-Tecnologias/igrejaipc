@@ -54,8 +54,8 @@ export default function GroupForm({ group }: GroupFormProps) {
 
   return (
     <div
-      className='flex flex-col w-full bg-[#131313] bg-noise-pattern py-[1rem] px-[1.5rem] rounded-[22px] mt-[6rem] border-t-[0.5px] border-[#929aa1]'
-      id='contactUs'>
+      className='flex flex-col w-full bg-[#131313] bg-noise-pattern py-[4rem] px-[1.5rem] rounded-[22px] mt-[6rem] border-t-[0.5px] border-[#929aa1]'
+      id='contato'>
       <span className='text-h5 md:text-h3 font-bold mb-3'>
         Entre em contato
       </span>

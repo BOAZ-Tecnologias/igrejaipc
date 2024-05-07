@@ -58,8 +58,8 @@ export default function ContatUsForm() {
 
   return (
     <div
-      className='flex flex-col w-full bg-noise-pattern py-[1rem] px-[1rem] gap-4 rounded-[22px] mt-[6rem] border-t-[0.5px] border-[#929aa1]'
-      id='contactUs'>
+      className='flex flex-col w-full bg-noise-pattern p-[2rem] md:p-[4rem] gap-4 rounded-[22px] mt-[6rem] border-t-[0.5px] border-[#929aa1]'
+      id='contato'>
       <span className='text-h4 md:text-h3 font-bold'>Entre em contato</span>
       <Form {...form}>
         <form

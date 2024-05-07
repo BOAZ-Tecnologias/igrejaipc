@@ -17,7 +17,7 @@ export default function CustomAccordion({ info }: CustomAccprdionProps) {
     <Accordion
       type='single'
       collapsible
-      className={`bg-noise-pattern w-full h-[auto] rounded-[22px] px-3 md:px-[2rem] py-[2rem] flex items-center`}>
+      className={`bg-noise-pattern w-full h-[auto] rounded-[22px] px-4 md:px-[2rem] py-[2rem]`}>
       <AccordionItem value='item-1' className='w-full'>
         <AccordionTrigger className=' flex flex-row justify-between w-full'>
           <div className='flex flex-row items-center gap-3 md:gap-10'>
