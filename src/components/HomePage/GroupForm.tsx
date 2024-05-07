@@ -42,6 +42,8 @@ export default function GroupForm({ group }: GroupFormProps) {
     },
   });
 
+  console.log(group);
+
   const handleFormSubmit = (values: z.infer<typeof GroupFormSchema>) => {
     const phoneNumber = '+5511936187180';
 
@@ -95,11 +97,14 @@ export default function GroupForm({ group }: GroupFormProps) {
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
+                      <SelectItem value='Diaconato'>Diaconato</SelectItem>
+                      <SelectItem value='Louvor e Adoração'>
+                        Louvor e Adoraçao
+                      </SelectItem>
+                      <SelectItem value='Dança'>Dança</SelectItem>
                       <SelectItem value='Áudio'>Áudio</SelectItem>
-                      <SelectItem value='Acolhimento'>Acolhimento</SelectItem>
                       <SelectItem value='Mídia'>Mídia</SelectItem>
                       <SelectItem value='Kids'>Kids</SelectItem>
-                      <SelectItem value='Adoração'>Adoração</SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
