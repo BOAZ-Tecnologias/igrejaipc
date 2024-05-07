@@ -58,7 +58,7 @@ export default function ContatUsForm() {
 
   return (
     <div
-      className='flex flex-col w-full bg-noise-pattern p-[2rem] md:p-[4rem] gap-4 rounded-[22px] mt-[6rem] border-t-[0.5px] border-[#929aa1]'
+      className='flex flex-col w-full md:w-[80%] bg-noise-pattern p-[2rem] md:p-[4rem] gap-4 rounded-[22px] mt-[6rem] border-t-[0.5px] border-[#929aa1]'
       id='contato'>
       <span className='text-h4 md:text-h3 font-bold'>Entre em contato</span>
       <Form {...form}>
@@ -101,7 +101,7 @@ export default function ContatUsForm() {
 
           <Button
             type='submit'
-            className='mt-6 md:w-[170px]'
+            className='mt-6 md:w-[270px]'
             variant={'gradient'}>
             Enviar
           </Button>

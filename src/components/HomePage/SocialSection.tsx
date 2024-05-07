@@ -19,7 +19,7 @@ export function SocialSection() {
   }
 
   return (
-    <div className='flex flex-col w-full'>
+    <div className='flex flex-col w-full md:mt-[10rem] md:mb-[5rem]'>
       <span className='text-h4 md:text-h3 font-bold mb-6'>
         Nossa Mídias Sociais
       </span>
