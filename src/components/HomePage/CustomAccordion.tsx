@@ -34,23 +34,15 @@ export default function CustomAccordion({ info }: CustomAccprdionProps) {
             {info.description}
           </div>
           <div className='flex flex-row gap-6 items-center mt-12'>
-            {info.options.map((option, index) => {
-              return index === 0 ? (
-                <Button
-                  content={option.title}
-                  to={option.url}
-                  variant='gradient'
-                  key={option.title}
-                />
-              ) : (
-                <Button
-                  content={option.title}
-                  to={option.url}
-                  variant='ghost'
-                  key={option.title}
-                />
-              );
-            })}
+            {info.options.map((option, index) => 
+              <Button
+                content={option.title}
+                to={option.url}
+                variant={index === 0 ? 'gradient' : 'ghost'}
+                key={option.title}
+                newTab={option.newTab}
+              />
+            )}
           </div>
         </AccordionContent>
       </AccordionItem>

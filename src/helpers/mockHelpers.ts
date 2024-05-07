@@ -15,6 +15,7 @@ export const STEPS_MOCK = [
       {
         title: 'Ao vivo',
         url: 'https://youtube.com/igrejapalavrasquecuram',
+        newTab: true
       },
     ],
   },
@@ -23,7 +24,13 @@ export const STEPS_MOCK = [
     title: 'Participe de uma célula',
     description:
       'Em nossas células, você encontrará um ambiente acolhedor e encorajador, onde pode compartilhar suas experiências, desafios e vitórias com outros membros da comunidade. É um lugar onde as amizades são cultivadas, as orações são compartilhadas e a Palavra é discutida de maneira significativa.',
-    options: [],
+    options: [
+      {
+        title: 'Quero participar',
+        url: 'https://inchur.ch/rjYHD',
+        newTab: true
+      }
+    ],
   },
   {
     id: 3,
@@ -33,7 +40,7 @@ export const STEPS_MOCK = [
     options: [
       {
         title: 'Quero servir',
-        url: '/#',
+        url: '/#ministerios',
       },
     ],
   },

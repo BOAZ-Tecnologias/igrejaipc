@@ -23,7 +23,7 @@ export default function Home() {
         </p>
 
         <div className=' flex flex-col w-full h-auto md:flex-row md:w-[70%] md:h-full'>
-          <div className='relative z-10 md:top-[30%] left-[30vw] md:left-8 w-[11rem] h-[14rem] md:w-[80%] md:h-[95%] bg-hero1 bg-cover rounded-[12px] animate-fade'>
+          <div className='relative z-10 md:top-[30%] left-[30vw] md:left-8 w-[11rem] h-[14rem] md:w-[80%] md:h-[100%] bg-hero1 bg-cover rounded-[12px] animate-fade'>
             <div className='bg-noise-pattern w-full h-full opacity-50 rounded-[12px]'></div>
           </div>
           <div className='relative  md:top-[-100px] top-[-50px] md:left-[-20px] w-[11rem] h-[14rem] md:w-[80%] md:h-[95%] bg-hero2 bg-cover rounded-[12px] animate-fade2s'>

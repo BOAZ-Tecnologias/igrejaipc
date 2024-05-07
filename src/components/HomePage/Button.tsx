@@ -6,6 +6,7 @@ type ButtonProps = {
   to: string;
   variant: 'ghost' | 'gradient';
   className?: string;
+  newTab?: boolean;
 };
 
 export default function Button({
@@ -13,6 +14,7 @@ export default function Button({
   to,
   variant,
   className,
+  newTab
 }: ButtonProps) {
   if (variant === 'ghost') {
     return (
@@ -21,7 +23,7 @@ export default function Button({
           `bg-transparent w-[auto] h-[40px] py-[7px] px-5 md:px-[25px] rounded-[24px] border-[2px] border-white flex flex-row items-center justify-center cursor-pointer transition-all hover:scale-95 hover:bg-white text-white hover:text-black font-semibold`,
           className,
         )}>
-        <Link href={to}>{content}</Link>
+        <Link target={newTab ? '_blank' : '_self'} href={to}>{content}</Link>
       </div>
     );
   } else {
@@ -31,7 +33,7 @@ export default function Button({
           `bg-gradient-to-r from-[#FE8580] to-[#C89CFE] w-[auto] h-[40px] py-[7px] px-5 md:px-[25px] rounded-[24px] flex flex-row items-center justify-center cursor-pointer transition-all hover:scale-95`,
           className,
         )}>
-        <Link href={to} className='text-dashboard-bg font-semibold'>
+        <Link href={to} target={newTab ? '_blank' : '_self'} className='text-dashboard-bg font-semibold'>
           {content}
         </Link>
       </div>

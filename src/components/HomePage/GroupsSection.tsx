@@ -15,7 +15,7 @@ export function GroupsSection() {
     setGroupSelected(selectedGroupCard);
   }
   return (
-    <section className='flex flex-col justify-center items-center w-full h-full gap-10'>
+    <section id="ministerios" className='flex flex-col justify-center items-center w-full h-full gap-10'>
       <span className='bg-gradient-to-r from-[#ff857e] via-[#c79cff] to-[#c79cff] text-transparent bg-clip-text text-h2 font-bold text-center mt-32'>
         Ministérios
       </span>

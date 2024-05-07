@@ -1,6 +1,7 @@
 export type Option = {
   title: string;
   url: string;
+  newTab?: boolean;
 };
 
 export type Iinfo = {
