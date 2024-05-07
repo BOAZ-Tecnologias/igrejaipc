@@ -14,7 +14,6 @@ import {
 import { Input } from '@/components/ui/input';
 import { Button } from './ui/button';
 import { Textarea } from './ui/textarea';
-import { RadioGroup, RadioGroupItem } from './ui/radio-group';
 import { useToast } from './ui/use-toast';
 
 const ContactUsFormSchema = z.object({
@@ -28,6 +27,7 @@ const ContactUsFormSchema = z.object({
 });
 
 export default function ContatUsForm() {
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof ContactUsFormSchema>>({
     resolver: zodResolver(ContactUsFormSchema),
     defaultValues: {
@@ -37,13 +37,23 @@ export default function ContatUsForm() {
   });
 
   const handleFormSubmit = (values: z.infer<typeof ContactUsFormSchema>) => {
-    console.log(values);
+    try {
+      const phoneNumber = '+5511936187180';
 
-    const phoneNumber = '+5511936187180';
-
-    const parsedText = `Olá, me chamo ${values.fullName} e tenho a seguinte dúvida: ${values.message}`;
-    const encodedString = encodeURIComponent(parsedText);
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedString}`, '_blank');
+      const parsedText = `Olá, me chamo ${values.fullName} e tenho a seguinte dúvida: ${values.message}`;
+      const encodedString = encodeURIComponent(parsedText);
+      window.open(
+        `https://wa.me/${phoneNumber}?text=${encodedString}`,
+        '_blank',
+      );
+    } catch (error) {
+      toast({
+        title: 'Erro ao enviar',
+        variant: 'destructive',
+      });
+    } finally {
+      form.reset();
+    }
   };
 
   return (
