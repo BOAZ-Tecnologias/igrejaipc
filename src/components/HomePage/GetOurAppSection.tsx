@@ -2,9 +2,7 @@
 import { Button } from '../ui/button';
 
 export function GetOurAppSection() {
-  function handleGetApp(value: any) {
-    console.log(value);
-
+  function handleGetApp(value: string) {
     switch (value) {
       case 'App Store':
         window.open(
@@ -25,7 +23,7 @@ export function GetOurAppSection() {
   return (
     <section
       id='get-app'
-      className=' flex flex-col w-full py-8 px-6 md:px-8 bg-gradient-to-r from-[#c79cffe5] to-[#9fbfff] rounded-lg mt-[3rem] md:mt-[6rem]'>
+      className=' flex flex-col w-full py-8 px-6 md:px-8 bg-gradient-to-r from-[#c79cffe5] to-[#9fbfff] rounded-lg mt-[3rem] md:mt-[6rem] mb-[3rem] md:mb-[6rem]'>
       <span className='text-h4 md:text-h3 font-bold'>Baixe o nosso App</span>
       <span className='text-regular-sm font-semibold mb-4'>
         Tenha acesso a noticias, eventos próximos e muito mais em um só lugar

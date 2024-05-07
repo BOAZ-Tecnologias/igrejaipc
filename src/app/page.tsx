@@ -1,6 +1,7 @@
 import { GetOurAppSection } from '@/components/HomePage/GetOurAppSection';
 import { GroupsSection } from '@/components/HomePage/GroupsSection';
 import { ImNewSection } from '@/components/HomePage/ImNewSection';
+import { SocialSection } from '@/components/HomePage/SocialSection';
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <GroupsSection />
       <ImNewSection />
       <GetOurAppSection />
+      <SocialSection />
     </main>
   );
 }
