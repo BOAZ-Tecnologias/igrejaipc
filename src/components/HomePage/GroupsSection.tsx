@@ -19,7 +19,7 @@ export function GroupsSection() {
       <span className='bg-gradient-to-r from-[#ff857e] via-[#c79cff] to-[#c79cff] text-transparent bg-clip-text text-h2 font-bold text-center mt-32'>
         Ministérios
       </span>
-      <div className='flex flex-col md:flex-row md:flex-wrap gap-4'>
+      <div className='flex flex-col md:flex-row md:flex-wrap gap-4 justify-center'>
         {GROUPS_MOCK.map((group) => {
           return (
             <GroupCard
