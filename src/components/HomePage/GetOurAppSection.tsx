@@ -29,7 +29,7 @@ export function GetOurAppSection() {
         Tenha acesso a noticias, eventos próximos e muito mais em um só lugar
       </span>
 
-      <div className='flex flex-row justify-between w-full md:w-[250px]'>
+      <div className='flex flex-row justify-around w-full md:w-[250px]'>
         <Button
           //@ts-ignore
           onClick={(e) => handleGetApp(e.target.textContent)}

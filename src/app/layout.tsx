@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={cn(inter.className, 'min-h-screen max-w-screen')}>
         <Header />
-        <div className='flex flex-col w-full h-full px-6 md:px-[8rem]'>
+        <div className='flex flex-col w-full h-full px-[1rem] md:px-[20rem]'>
           {children}
         </div>
         <Toaster />

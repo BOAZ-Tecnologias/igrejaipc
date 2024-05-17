@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export function ImNewSection() {
   return (
-    <section className='flex flex-col items-center justify-center pt-[10rem] gap-10 w-full animate-fade'>
+    <section className='flex flex-col items-center justify-center gap-10 w-full animate-fade'>
       <div
         id='title-section'
         className='flex flex-col items-center justify-center'>
