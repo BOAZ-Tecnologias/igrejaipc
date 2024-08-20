@@ -1,0 +1,229 @@
+[
+ {
+		"leader": "Adilson Barbosa",
+		"weekday": "Terça-Feira",
+		"hour": "20:00",
+		"address": "Rua Quinto Salvadori, 1256. Jardim Cidade Nova. Campo Mourão / PR. 87308066",
+		"category": "Masculino",
+		"subCategory": "Adulto",
+		"active": true
+ },
+ {
+		"leader": "Ana Cláudia",
+		"whatsapp": "+5544997236577",
+		"weekday": "Quinta-Feira",
+		"hour": "20:00",
+		"address": "Rua Tapejara, 328. Jardim Imperial I. Campo Mourão / PR. 87308066",
+		"category": "Feminino",
+		"subCategory": "Adulto",
+		"active": true
+ },
+ {
+		"leader": "Elisete Domingues Ciola",
+		"whatsapp": "+5544999502445",
+		"weekday": "Segunda-Feira",
+		"hour": "20:00",
+		"address": "Avenida Comendador Norberto Marcondes, 1674. Centro. Campo Mourão / PR. 87303100",
+		"category": "Feminino",
+		"subCategory": "Adulto",
+		"active": true
+ },
+ {
+  "leader": "Bruno e Dani Passos",
+  "whatsapp": "+5544991786896",
+  "weekday": "Quinta-Feira",
+  "address": "Rua São Paulo, 1440 - Ap. 2. Centro. Campo Mourão / PR. 87303140",
+  "category": "Misto",
+	"subCategory": "Jovens",
+  "active": true
+ },
+ {
+  "leader": "Fernando Sander Silveira",
+  "whatsapp": "+5544999070317",
+  "weekday": "Quinta-Feira",
+	"hour": "20:00",
+  "address": "Rua João Serathiuk, 78. Jardim Paraíso do Campo. Campo Mourão / PR. 87302010",
+	"category": "Masculino",
+	"subCategory": "Adulto",
+  "active": true
+ },
+ {
+  "leader": "Gisele Rodrigues",
+  "whatsapp": "+5544998877373",
+  "weekday": "Segunda-Feira",
+  "hour": "19:00",
+  "address": "Rua Rocha Pombo, 2430. Jardim John Kennedy. Campo Mourão / PR. 87303043",
+	"category": "Feminino",
+	"subCategory": "Adulto",
+  "active": true
+ },
+ {
+  "leader": "Gleissa Rorato Neto Leão",
+  "whatsapp": "+5544998057601",
+  "weekday": "Tuesdays",
+  "hour": "20:00",
+  "address": "Avenida José Wierzchon, 3817. Jardim Francisco Ferreira Albuquerque. Campo Mourão / PR. 87309124",
+	"category": "Feminino",
+	"subCategory": "Adulto",
+  "active": true
+ },
+ {
+  "leader": "Juliano Correa Anselmo",
+  "whatsapp": "+5548999093984",
+  "weekday": "Segunda-Feira",
+  "hour": "20:00",
+  "address": "Rua Panambi, 1568. Centro. Campo Mourão / PR. 87303230",
+	"category": "Masculino",
+	"subCategory": "Adulto",
+  "active": true
+ },
+ {
+  "leader": "Jaqueline Mazzo",
+  "whatsapp": "+5544998995694",
+  "weekday": "Quinta-Feira",
+  "hour": "20:00",
+  "address": "Rua Maria Olimpia Jardim, 370 - A. Jardim Izabel. Campo Mourão / PR. 87309185",
+	"category": "Feminino",
+	"subCategory": "Adulto",
+  "active": true
+ },
+ {
+  "leader": "Daniele Zanatta Pianoski",
+  "whatsapp": "+5544999004087",
+  "weekday": "Segunda-Feira",
+  "Hour": "19:00",
+  "address": "Av. João Batista Salvadori, 2948. Jardim Cidade Nova. Campo Mourão / PR. 87308015",
+  "category": "Feminino",
+	"subCategory": "Crianças",
+  "active": true
+ },
+ {
+  "leader": "Michele Zanatta Rieling",
+  "whatsapp": "+5544997469999",
+  "weekday": "Segunda-Feira",
+  "address": "Av João Batista Salvadori, 2948. Igreja IPC - Piacentini. Campo Mourão / PR. 87308015",
+  "category": "Feminino",
+	"subCategory": "Crianças",
+  "active": true
+ },
+ {
+  "leader": "Silvania de Camargo Oliveira",
+  "whatsapp": "+5544998694558",
+  "weekday": "Segunda-Feira",
+  "hour": "20:00",
+  "address": "Av João Batista Salvadori, 2948. Igreja IPC - Piacentini. Campo Mourão / PR. 87308015",
+  "category": "Feminino",
+	"subCategory": "Crianças",
+  "active": true
+ },
+ {
+  "leader": "Calil Marlon Pianoski",
+  "whatsapp": "+5544999939785",
+  "weekday": "Segunda-Feira",
+  "hour": "19:00",
+  "address": "Av. João Batista Salvadori, 2948. Igreja IPC - Piacentini. Campo Mourão / PR. 87308015",
+  "category": "Masculino",
+	"subCategory": "Crianças",
+  "active": true
+ },
+ {
+  "leader": "Luciana Maximo",
+  "whatsapp": "+5544999553499",
+  "weekday": "Quinta-Feira",
+  "hour": "20:00",
+  "address": "Rua Brasil, 110. Jardim Laura. Campo Mourão / PR. 87300115",
+	"category": "Feminino",
+	"subCategory": "Adulto",
+  "active": true
+ },
+ {
+  "leader": "Márcia Rodrigues",
+  "whatsapp": "+5544998383301",
+  "weekday": "Quinta-Feira",
+  "hour": "20:00",
+  "address": "Rua Xambrê, 50. Conjunto Habitacional Governador Parigot de Souza. Campo Mourão/PR. 87310635",
+	"category": "Feminino",
+	"subCategory": "Adulto",
+  "active": true
+ },
+ {
+  "leader": "Mauro Sobrinho",
+  "whatsapp": "+5543996056056",
+  "weekday": "Terça-Feira",
+  "hour": "20:00",
+  "address": "Av. Armelindo Trombini, 3015. Jardim Francisco Ferreira Albuquerque. Campo Mourão/PR. 87309105",
+  "category": "Masculino",
+	"subCategory": "Jovens",
+  "active": true
+ },
+ {
+  "leader": "Drielli Pariz",
+  "whatsapp": "+5544998561061",
+  "weekday": "Sábado",
+  "hour": "14:30",
+  "address": "Avenida José Wierzchon, 3737. Jardim Francisco Ferreira Albuquerque. Campo Mourão/PR. 87309088",
+  "category": "Feminino",
+	"subCategory": "Adolescentes",
+  "active": true
+ },
+ {
+  "leader": "Ricardo Ciola",
+  "whatsapp": "+5544999790525",
+  "weekday": "Quinta-Feira",
+  "Monthly Frequency": "20:00",
+  "address": "Avenida Comendador Norberto Marcondes, 1764 - Apto 214. Centro. Campo Mourão/PR. 87303100",
+  "category": "Masculino",
+	"subCategory": "Adolescentes",
+  "active": true
+ },
+ {
+  "leader": "Gilvano Souza",
+  "whatsapp": "+5544998783939",
+  "weekday": "Segunda-Feira",
+  "hour": "20:00",
+  "address": "Rua Astorga, 71 - Conjunto Habitacional Antilhas. Campo Mourão/PR. 87308028",
+  "category": "Masculino",
+	"subCategory": "Adolescentes",
+  "active": true
+ },
+ {
+  "leader": "Pamela Fermino",
+  "whatsapp": "+5543996231184",
+  "weekday": "Segunda-Feira",
+  "Monthly Frequency": "20:00",
+  "address": "Rua Kensei Agarie, 607. Jardim Novo Centro. Campo Mourão/PR. 87301756",
+  "category": "Feminino",
+	"subCategory": "Jovens",
+  "active": true
+ },
+ {
+  "leader": "Rogério Mazzo",
+  "whatsapp": "+5544999653243",
+  "weekday": "Quinta-Feira",
+  "hour": "20:00",
+  "address": "Rua Maria Olimpia Jardim, 370 - A. Jardim Izabel. Campo Mourão/PR. 87309185",
+	"category": "Masculino",
+	"subCategory": "Adulto",
+  "active": true
+ },
+ {
+  "leader": "Marcos Satio",
+  "whatsapp": "+5544999711401",
+  "weekday": "Quinta-Feira",
+  "hour": "20:00",
+  "address": "Rua Vereador Geremias Cilião de Araújo, 630. Jardim Francisco Ferreira Albuquerque. Campo Mourão/PR. 87309086",
+	"category": "Masculino",
+	"subCategory": "Adulto",
+  "active": true
+ },
+ {
+  "leader": "Silvia Cristina",
+  "whatsapp": "+5544998105360",
+  "weekday": "Terça-Feira",
+  "hour": "20:00",
+  "address": "Rua Quinto Salvadori, 1256 - Jardim Cidade Nova. Campo Mourão/PR. 87308066",
+	"category": "Feminino",
+	"subCategory": "Adulto",
+  "active": true
+ }
+]

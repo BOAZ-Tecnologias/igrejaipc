@@ -1,10 +1,17 @@
 import Image from "next/image";
 import heroImage from "../../assets/images/hero1.jpg";
-import { CalendarDays, HandHeart, MapPinIcon } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import Button from "@/components/HomePage/Button";
+import { HandHeart } from "lucide-react";
+import GroupCard, { Cell } from "@/components/GroupCard";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import CellsInfo from "@/helpers/cells-ipc.json";
 
 export default function Groups() {
+  const MansCells: Cell[] = CellsInfo.filter(
+    (cell) => cell.category === "Masculino"
+  );
+  const WomansCells: Cell[] = CellsInfo.filter(
+    (cell) => cell.category === "Feminino"
+  );
   return (
     <main className="flex flex-col w-full min-h-screen mt-[100px]">
       <section
@@ -61,32 +68,25 @@ export default function Groups() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col items-center w-full animate-fade py-8">
-        <div
-          id="card"
-          className="flex flex-col w-full h-full bg-noise-pattern rounded-2xl border-t-[0.5px] border-[hsla(0, 0%, 68%, 0.51)] py-4"
-        >
-          <div className="flex flex-row px-8 py-6 gap-4">
-            <Avatar className="w-[74px] h-[74px]">
-              <AvatarImage src="https://as2.ftcdn.net/v2/jpg/03/02/94/53/1000_F_302945354_dqIiUiITKpard7fBVKDLtffIqnkDbyo4.jpg" />
-              <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-            <div className="flex flex-col gap-2">
-              <span className="text-lg font-semibold">Grupo da Maria</span>
-              <Button content="Registrar" variant="ghost" to="#" />
-            </div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <div className="flex flex-row px-8 gap-2">
-              <MapPinIcon />
-              <span>Rua Craviúna, 255, Jd Europa</span>
-            </div>
-            <div className="flex flex-row px-8 gap-2">
-              <CalendarDays />
-              <span>Todas as terças, às 20hrs</span>
-            </div>
-          </div>
-        </div>
+      <section className="flex flex-col justify-center items-center w-full py-8">
+        <Tabs defaultValue="Masculino" className="w-full">
+          <TabsList className="grid w-full grid-cols-2 bg-black-80">
+            <TabsTrigger value="Masculino">Masculino</TabsTrigger>
+            <TabsTrigger value="Feminino">Feminino</TabsTrigger>
+          </TabsList>
+          <TabsContent value="Masculino" className="flex flex-col gap-8">
+            {MansCells.map((cell, index) => (
+              <GroupCard key={`${cell.leader}${index}`} cell={cell} />
+            ))}
+          </TabsContent>
+          <TabsContent value="Feminino" className="flex flex-col gap-8">
+            {WomansCells.map((cell, index) => (
+              <GroupCard key={`${cell.leader}${index}`} cell={cell} />
+            ))}
+          </TabsContent>
+        </Tabs>
+
+        {/* <GroupCard /> */}
       </section>
     </main>
   );
