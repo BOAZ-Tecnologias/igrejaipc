@@ -1,9 +1,7 @@
 "use client";
 import { CalendarDays, MapPinIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import heroImage from "../../assets/images/hero1.jpg";
 import Image from "next/image";
-import { useToast } from "./ui/use-toast";
 import { Button } from "./ui/button";
 
 export type Cell = {
@@ -44,7 +42,7 @@ const GroupCard: React.FC<GroupCardProps> = ({ cell }) => {
       id="card"
       className="flex flex-col w-full h-full bg-noise-pattern rounded-2xl border-t-[0.5px] border-[hsla(0, 0%, 68%, 0.51)] py-4"
     >
-      <div className="flex flex-row px-8 py-6 gap-4">
+      <div className="flex flex-row px-2 py-6 gap-4">
         <Avatar className="w-[74px] h-[74px] mt-4">
           <AvatarImage asChild>
             <Image
@@ -70,7 +68,7 @@ const GroupCard: React.FC<GroupCardProps> = ({ cell }) => {
           </Button>
         </div>
       </div>
-      <div className="flex flex-col gap-4 items-start">
+      <div className="flex flex-col gap-4 items-start px-2">
         <div className="flex flex-row items-center px-2 gap-2">
           <div className="flex items-center justify-center bg-gradient-to-r from-[#ff857e] to-[#c79cff] rounded-full p-[4px]">
             <MapPinIcon color="#00000090" />
