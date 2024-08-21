@@ -1,8 +1,10 @@
+"use client";
 import { CalendarDays, MapPinIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import heroImage from "../../assets/images/hero1.jpg";
-import Button from "@/components/HomePage/Button";
 import Image from "next/image";
+import { useToast } from "./ui/use-toast";
+import { Button } from "./ui/button";
 
 export type Cell = {
   leader: string;
@@ -24,6 +26,19 @@ const GroupCard: React.FC<GroupCardProps> = ({ cell }) => {
     cell.category === "Masculino"
       ? `Célula do ${cell.leader}`
       : `Célula da ${cell.leader}`;
+
+  const urlToJoin = cell.hour ? `` : null;
+
+  const handleButtonClick = () => {
+    try {
+      const phoneNumber = cell.whatsapp ? cell.whatsapp : "+5511936187180";
+
+      const parsedText = `Olá, gostaria de participar da ${title}.`;
+      window.open(`https://wa.me/${phoneNumber}?text=${parsedText}`, "_blank");
+    } catch (error) {
+      console.warn(error);
+    }
+  };
   return (
     <div
       id="card"
@@ -45,16 +60,27 @@ const GroupCard: React.FC<GroupCardProps> = ({ cell }) => {
         </Avatar>
         <div className="flex flex-col gap-2">
           <span className="text-md font-semibold">{title}</span>
-          <Button content="Registrar" variant="ghost" to="#" />
+          <Button
+            type="button"
+            className="w-[145px] rounded-2xl"
+            variant={"outline"}
+            onClick={handleButtonClick}
+          >
+            Participar
+          </Button>
         </div>
       </div>
       <div className="flex flex-col gap-4 items-start">
         <div className="flex flex-row items-center px-2 gap-2">
-          <MapPinIcon />
+          <div className="flex items-center justify-center bg-gradient-to-r from-[#ff857e] to-[#c79cff] rounded-full p-[4px]">
+            <MapPinIcon color="#00000090" />
+          </div>
           <span className="max-w-[90%] text-left">{cell.address}</span>
         </div>
-        <div className="flex flex-row px-2 gap-2">
-          <CalendarDays />
+        <div className="flex flex-row px-2 gap-2 items-center">
+          <div className="flex items-center justify-center bg-gradient-to-r from-[#ff857e] to-[#c79cff] rounded-full p-[4px]">
+            <CalendarDays color="#00000090" />
+          </div>
           <span>
             Toda {cell.weekday} {cell.hour ? `, às ${cell.hour}hrs` : null}
           </span>
