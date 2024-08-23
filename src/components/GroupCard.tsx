@@ -38,7 +38,6 @@ const GroupCard: React.FC<GroupCardProps> = ({ cell }) => {
       console.warn(error);
     }
   };
-  console.log(`${parsedAddress[0]}${parsedAddress[1]}`);
   return (
     <div
       id="card"
@@ -81,7 +80,7 @@ const GroupCard: React.FC<GroupCardProps> = ({ cell }) => {
           <div className="flex items-center justify-center bg-gradient-to-r from-[#ff857e] to-[#c79cff] rounded-full p-[4px]">
             <MapPinIcon color="#3e3e3e" />
           </div>
-          <span className="max-w-[90%] text-left">
+          <span className="max-w-[90%] md:w-full text-left md:text-wrap">
             {`${parsedAddress[0]}${parsedAddress[1]}`}
           </span>
         </div>
