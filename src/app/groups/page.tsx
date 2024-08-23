@@ -5,10 +5,50 @@ import { HandHeart } from "lucide-react";
 import GroupCard, { Cell } from "@/components/GroupCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CellsInfo from "@/helpers/cells-ipc.json";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useIsVisible } from "@/lib/useIsVisible";
+import FadeInImage from "@/components/FadeInImage";
+
+const images = [
+  {
+    id: 2,
+    src: heroImage,
+    alt: "Image 1",
+    className:
+      "rounded-lg absolute left-5 top-32 md:w-[180px] md:left-[90px]  md:top-[120px]",
+  },
+  {
+    id: 1,
+    src: heroImage,
+    alt: "Image 1",
+    className:
+      "hidden md:flex absolute rounded-lg w-[160px] rounded-lg left-[180px] top-[270px]",
+  },
+  {
+    id: 5,
+    src: heroImage,
+    alt: "Image 2",
+    className:
+      "rounded-lg absolute right-6 top-52 md:w-[150px] md:right-[60px] md:top-[120px]",
+  },
+  {
+    id: 3,
+    src: heroImage,
+    alt: "Image 3",
+    className:
+      "rounded-lg absolute md:z-[12] right-14 top-28 md:w-[160px] md:right-[230px]",
+  },
+  {
+    id: 4,
+    src: heroImage,
+    alt: "Image 3",
+    className:
+      "hidden md:flex rounded-lg absolute w-[160px] right-[135px] top-[280px]",
+  },
+];
 
 export default function Groups() {
+  const [visibleImages, setVisibleImages] = useState([]);
   const MansCells: Cell[] = CellsInfo.filter(
     (cell) => cell.category === "Masculino"
   );
@@ -18,31 +58,21 @@ export default function Groups() {
 
   const ref1 = useRef<HTMLElement | null>(null);
   const isVisible1 = useIsVisible(ref1);
+  const ref2 = useRef<any>(null);
+  const isVisible2 = useIsVisible(ref2);
+
   return (
     <main className="flex flex-col w-full min-h-screen mt-[100px]">
       <section id="hero-section" className="flex flex-col items-center w-full">
         <div className="flex flex-row w-full h-[240px]">
-          <Image
-            src={heroImage}
-            width={100}
-            height={120}
-            alt=""
-            className="rounded-lg absolute left-5 top-32 animate-fade"
-          />
-          <Image
-            src={heroImage}
-            width={100}
-            height={120}
-            alt=""
-            className="rounded-lg absolute right-6 top-52 animate-fade3s"
-          />
-          <Image
-            src={heroImage}
-            width={100}
-            height={120}
-            alt=""
-            className="rounded-lg absolute right-14 top-28 animate-fade3s"
-          />
+          {images.map((image, index) => (
+            <FadeInImage
+              key={index}
+              src={image.src}
+              delay={image.id * 500}
+              className={image.className}
+            />
+          ))}
         </div>
         <div className="flex items-center justify-center w-[64px] h-[64px] rounded-full bg-gradient-to-r from-[#ff857e] to-[#c79cff]">
           <HandHeart color="#00000090" size={32} />
@@ -53,7 +83,12 @@ export default function Groups() {
           <span className="bg-gradient-to-r from-[#FD8582] to-[#C89CFD] text-transparent bg-clip-text text-large text-center mb-16">
             Encontre o seu grupo, faça parte da comunidade.
           </span>
-          <div className="flex flex-row gap-2 justify-center w-full h-full">
+          <div
+            ref={ref2}
+            className={`md:hidden transition-opacity ease-in duration-700 flex flex-row gap-2 justify-center w-full h-full ${
+              isVisible2 ? "opacity-100" : "opacity-0"
+            }`}
+          >
             <Image
               src={heroImage}
               width={100}
@@ -93,8 +128,6 @@ export default function Groups() {
             ))}
           </TabsContent>
         </Tabs>
-
-        {/* <GroupCard /> */}
       </section>
     </main>
   );

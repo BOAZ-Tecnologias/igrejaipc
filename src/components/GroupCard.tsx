@@ -25,8 +25,6 @@ const GroupCard: React.FC<GroupCardProps> = ({ cell }) => {
       ? `Célula do ${cell.leader}`
       : `Célula da ${cell.leader}`;
 
-  const urlToJoin = cell.hour ? `` : null;
-
   const handleButtonClick = () => {
     try {
       const phoneNumber = cell.whatsapp ? cell.whatsapp : "+5511936187180";
@@ -40,9 +38,9 @@ const GroupCard: React.FC<GroupCardProps> = ({ cell }) => {
   return (
     <div
       id="card"
-      className="flex flex-col w-full h-full bg-noise-pattern rounded-2xl border-t-[0.5px] border-[hsla(0, 0%, 68%, 0.51)] py-4"
+      className="flex flex-col w-full h-full bg-noise-pattern rounded-2xl border-t-[0.5px] border-[hsla(0, 0%, 68%, 0.51)] py-8 px-4"
     >
-      <div className="flex flex-row px-2 py-6 gap-4">
+      <div className="flex flex-row px-2 mb-3 gap-4">
         <Avatar className="w-[74px] h-[74px] mt-4">
           <AvatarImage asChild>
             <Image

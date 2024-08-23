@@ -7,6 +7,7 @@ import MenuIcon from "../../assets/icons/align-right-svgrepo-com.svg";
 import Image from "next/image";
 import { Menu } from "lucide-react";
 import { HamburguerButton } from "./HamburguerButton";
+import NavMenu from "./NavMenu";
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -22,6 +23,7 @@ export default function Header() {
           href={"/"}
           className="bg-logoFull bg-cover bg-center w-[100px] h-[50%] md:w-[150px] md:h-[70%] cursor-pointer transition-all hover:scale-90 opacity-70 rounded-lg"
         />
+        <NavMenu />
         <div className="flex flex-row items-center justify-center bg-gradient-to-r from-purple-300 to-blue-300 px-4 py-2 rounded-[24px] cursor-pointer transition-all hover:scale-90">
           <Link
             href={"#baixar-app"}
