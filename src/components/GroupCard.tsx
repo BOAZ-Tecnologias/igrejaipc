@@ -13,6 +13,7 @@ export type Cell = {
   category: string;
   subCategory: string;
   active: boolean;
+  avatar?: string;
 };
 
 type GroupCardProps = {
@@ -46,7 +47,7 @@ const GroupCard: React.FC<GroupCardProps> = ({ cell }) => {
             <Image
               width={20}
               height={20}
-              src={cell.avatar}
+              src={cell.avatar || ""}
               alt="Cell leader selfie"
             />
           </AvatarImage>
