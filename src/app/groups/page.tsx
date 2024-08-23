@@ -15,7 +15,7 @@ const images = [
     src: heroImage,
     alt: "Image 1",
     className:
-      "rounded-lg absolute left-5 top-32 md:w-[180px] md:left-[90px]  md:top-[120px]",
+      "rounded-lg absolute left-5 top-32 w-[120px] md:w-[180px] md:left-[90px]  md:top-[120px]",
   },
   {
     id: 1,
@@ -29,14 +29,14 @@ const images = [
     src: heroImage,
     alt: "Image 2",
     className:
-      "rounded-lg absolute right-6 top-52 md:w-[150px] md:right-[60px] md:top-[120px]",
+      "rounded-lg absolute right-6 top-52 w-[120px] md:w-[150px] md:right-[60px] md:top-[120px]",
   },
   {
     id: 3,
     src: heroImage,
     alt: "Image 3",
     className:
-      "rounded-lg absolute md:z-[12] right-14 top-28 md:w-[160px] md:right-[230px]",
+      "rounded-lg absolute md:z-[12] right-14 top-28 w-[120px] md:w-[160px] md:right-[230px]",
   },
   {
     id: 4,
