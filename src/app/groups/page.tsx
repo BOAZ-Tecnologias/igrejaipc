@@ -63,19 +63,12 @@ export default function Groups() {
 
   return (
     <main className="flex flex-col w-full min-h-screen mt-[100px]">
-      <section id="hero-section" className="flex flex-col items-center w-full">
-        <div className="flex flex-row w-full h-[240px]">
-          {images.map((image, index) => (
-            <FadeInImage
-              key={index}
-              src={image.src}
-              delay={image.id * 500}
-              className={image.className}
-            />
-          ))}
-        </div>
+      <section
+        id="hero-section"
+        className="flex flex-col items-center w-full mt-8"
+      >
         <div className="flex items-center justify-center w-[64px] h-[64px] rounded-full bg-gradient-to-r from-[#ff857e] to-[#c79cff]">
-          <HandHeart color="#00000090" size={32} />
+          <HandHeart color="#333" size={32} />
         </div>
 
         <div id="title" className="flex flex-col items-center mt-8">
@@ -83,27 +76,6 @@ export default function Groups() {
           <span className="bg-gradient-to-r from-[#FD8582] to-[#C89CFD] text-transparent bg-clip-text text-large text-center mb-16">
             Encontre o seu grupo, faça parte da comunidade.
           </span>
-          <div
-            ref={ref2}
-            className={`md:hidden transition-opacity ease-in duration-700 flex flex-row gap-2 justify-center w-full h-full ${
-              isVisible2 ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <Image
-              src={heroImage}
-              width={100}
-              height={120}
-              alt=""
-              className="rounded-lg h-[140px] w-[120px] animate-fade"
-            />
-            <Image
-              src={heroImage}
-              width={100}
-              height={120}
-              alt=""
-              className="rounded-lg mt-8 h-[140px] w-[120px] animate-fade3s"
-            />
-          </div>
         </div>
       </section>
       <section

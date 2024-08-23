@@ -9,7 +9,7 @@ type MobileMenuProps = {
 export function MobileMenu({ openMenu, openDrawer }: MobileMenuProps) {
   return (
     <div
-      className={`h-0 bg-[#1e1e1e] bg-opacity-65 w-full transition-all duration-700 ease-in-out ${
+      className={`h-0 bg-[#1e1e1e] bg-opacity-85 w-full transition-all duration-700 ease-in-out ${
         openMenu ? "h-screen" : ""
       }`}
     >

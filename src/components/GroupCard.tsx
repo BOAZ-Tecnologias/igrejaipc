@@ -1,5 +1,5 @@
 "use client";
-import { CalendarDays, MapPinIcon } from "lucide-react";
+import { AtSignIcon, CalendarDays, MapPinIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
 import { Button } from "./ui/button";
@@ -26,27 +26,30 @@ const GroupCard: React.FC<GroupCardProps> = ({ cell }) => {
       ? `Célula do ${cell.leader}`
       : `Célula da ${cell.leader}`;
 
+  const parsedAddress = cell.address.split(".");
+  console.log(parsedAddress);
   const handleButtonClick = () => {
     try {
       const phoneNumber = cell.whatsapp ? cell.whatsapp : "+5511936187180";
 
-      const parsedText = `Olá, gostaria de participar da ${title}.`;
+      const parsedText = `Olá, gostaria de participar ${title}.`;
       window.open(`https://wa.me/${phoneNumber}?text=${parsedText}`, "_blank");
     } catch (error) {
       console.warn(error);
     }
   };
+  console.log(`${parsedAddress[0]}${parsedAddress[1]}`);
   return (
     <div
       id="card"
-      className="flex flex-col w-full h-full bg-noise-pattern rounded-2xl border-t-[0.5px] border-[hsla(0, 0%, 68%, 0.51)] py-8 px-4"
+      className="flex flex-col w-full h-full bg-noise-pattern rounded-2xl border-t-[0.5px] border-[hsla(0, 0%, 68%, 0.51)] py-8 px-4 mt-4"
     >
       <div className="flex flex-row px-2 mb-3 gap-4">
         <Avatar className="w-[74px] h-[74px] mt-4">
           <AvatarImage asChild>
             <Image
-              width={20}
-              height={20}
+              width={1000}
+              height={1000}
               src={cell.avatar || ""}
               alt="Cell leader selfie"
             />
@@ -56,7 +59,7 @@ const GroupCard: React.FC<GroupCardProps> = ({ cell }) => {
           </AvatarFallback>
         </Avatar>
         <div className="flex flex-col gap-2">
-          <span className="text-md font-semibold">{title}</span>
+          <span className="text-md font-semibold">{cell.leader}</span>
           <Button
             type="button"
             className="w-[145px] rounded-2xl"
@@ -70,16 +73,25 @@ const GroupCard: React.FC<GroupCardProps> = ({ cell }) => {
       <div className="flex flex-col gap-4 items-start px-2">
         <div className="flex flex-row items-center px-2 gap-2">
           <div className="flex items-center justify-center bg-gradient-to-r from-[#ff857e] to-[#c79cff] rounded-full p-[4px]">
-            <MapPinIcon color="#00000090" />
+            <AtSignIcon color="#3e3e3e" />
           </div>
-          <span className="max-w-[90%] text-left">{cell.address}</span>
+          <span className="max-w-[90%] text-left">{cell.subCategory}</span>
+        </div>
+        <div className="flex flex-row items-center px-2 gap-2">
+          <div className="flex items-center justify-center bg-gradient-to-r from-[#ff857e] to-[#c79cff] rounded-full p-[4px]">
+            <MapPinIcon color="#3e3e3e" />
+          </div>
+          <span className="max-w-[90%] text-left">
+            {`${parsedAddress[0]}${parsedAddress[1]}`}
+          </span>
         </div>
         <div className="flex flex-row px-2 gap-2 items-center">
           <div className="flex items-center justify-center bg-gradient-to-r from-[#ff857e] to-[#c79cff] rounded-full p-[4px]">
-            <CalendarDays color="#00000090" />
+            <CalendarDays color="#3e3e3e" />
           </div>
           <span>
-            Toda {cell.weekday} {cell.hour ? `, às ${cell.hour}hrs` : null}
+            Toda {cell.weekday}
+            {cell.hour ? `, às ${cell.hour}hrs` : null}
           </span>
         </div>
       </div>
